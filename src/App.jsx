@@ -9,6 +9,7 @@ import Content from "./Content";
 
 import Third from "./Third";
 
+import Fourth from "./Fourth";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,8 @@ function App() {
      <Navbar/>
     <Content/>
     <Third/>
+
+   <Fourth/>
 
     </>
   )
