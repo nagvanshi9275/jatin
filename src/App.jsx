@@ -7,6 +7,9 @@ import Navbar from "./Navbar";
 
 import Content from "./Content";
 
+import Third from "./Third";
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,13 +19,21 @@ function App() {
      
 
      <Navbar/>
-
     <Content/>
-
-
+    <Third/>
 
     </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+

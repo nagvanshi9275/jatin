@@ -64,9 +64,20 @@ export default function Second() {
               alt="AI Technology"
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
+
+
+            
           </Card>
         </Grid>
       </Grid>
     </div>
   );
 }
+
+
+
+
+
+
+
+
