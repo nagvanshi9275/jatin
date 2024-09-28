@@ -5,7 +5,7 @@ export default function Second() {
   return (
     <div style={{ padding: "20px" }}>
       <Typography variant="h4" align="center" style={{ marginBottom: "20px" }}>
-        We are currently in the working phase hjjg
+        We are currently in the working phase 
       </Typography>
 
       <Grid container spacing={2}>
@@ -16,26 +16,30 @@ export default function Second() {
               <Typography variant="h5" style={{ fontWeight: "bold" }}>
                 Transforming Lives with AI
               </Typography>
-              <Typography variant="body1" style={{ marginTop: "10px" }}>
+              
+              {/* Updated Typography with increased font size */}
+              <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 Medication Reminders:
                 <br /> "Never miss a dose with
                 <br /> personalized, voice-activated
                 <br /> medication alerts."
-                <br />
               </Typography>
-              <Typography variant="body1" style={{ marginTop: "10px" }}>
+              
+              <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 Health Monitoring:
                 <br /> "Track your vitals in real-time
                 <br /> and stay ahead of potential
                 <br /> health risks."
               </Typography>
-              <Typography variant="body1" style={{ marginTop: "10px" }}>
+              
+              <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 Emergency Assistance:
                 <br /> "Instant SOS alerts to family
                 <br /> or emergency services in
                 <br /> case of a fall or emergency."
               </Typography>
-              <Typography variant="body1" style={{ marginTop: "10px" }}>
+              
+              <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 Companionship:
                 <br /> "Engage in friendly
                 <br /> conversations, receive daily
@@ -43,7 +47,8 @@ export default function Second() {
                 <br /> reduce feelings of
                 <br /> loneliness."
               </Typography>
-              <Typography variant="body1" style={{ marginTop: "10px" }}>
+              
+              <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 Family Connectivity:
                 <br /> "Easily connect with loved
                 <br /> ones through voice or video
@@ -64,20 +69,9 @@ export default function Second() {
               alt="AI Technology"
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
-
-
-            
           </Card>
         </Grid>
       </Grid>
     </div>
   );
 }
-
-
-
-
-
-
-
-
