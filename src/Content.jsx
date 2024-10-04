@@ -1,16 +1,18 @@
+
 import React, { useEffect, useState } from "react";
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
-
 import Second from "./Second";
 
 export default function Content() {
   const [rotation, setRotation] = useState(0);
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Adjust rotation based on scroll position
+      // Adjust rotation and scale based on scroll position
       setRotation(scrollY * 0.1);
+      setScale(1 + scrollY * 0.0005); // Scale up as you scroll down
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,7 +22,7 @@ export default function Content() {
   }, []);
 
   return (
-    <div style={{ padding: "20px", borderRadius: "8px" }}>
+    <div style={{ padding: "20px", borderRadius: "8px", perspective: "1000px" }}>
       <Grid container spacing={2}>
         {/* Left Column: Photo Card */}
         <Grid item xs={12} md={6}>
@@ -32,7 +34,8 @@ export default function Content() {
               maxWidth: "100%",
               position: "relative",
               transition: "transform 0.3s ease",
-              transform: `rotate(${rotation}deg)`, // Rotate based on scroll
+              transform: `rotateY(${rotation}deg) scale(${scale})`,
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
             }}
           >
             <CardMedia
@@ -69,7 +72,9 @@ export default function Content() {
               boxShadow: "none", // Remove shadow
               border: "none", // Remove border
               transition: "transform 0.3s ease",
-              transform: `rotate(${rotation}deg)`, // Rotate based on scroll
+              transform: `rotateY(-${rotation}deg) scale(${scale})`,
+              opacity: 1,
+              position: "relative",
             }}
           >
             <CardContent>
@@ -81,7 +86,7 @@ export default function Content() {
               <Typography variant="body1" style={{ marginTop: "10px", fontSize: "1.2rem" }}>
                 A smart, voice-activated
                 <br />
-                device designed to assist the anyoune
+                device designed to assist anyone
                 <br />
                 elderly and those feeling
                 <br />
@@ -103,3 +108,12 @@ export default function Content() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
